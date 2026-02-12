@@ -1,7 +1,6 @@
 #import modules
 import ee
 import time
-import fiona
 from datetime import date, datetime
 import os 
 from pandas import read_csv
