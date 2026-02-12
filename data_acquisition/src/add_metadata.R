@@ -130,8 +130,8 @@ add_metadata <- function(yaml,
       select(-`system:index`) %>% 
       left_join(., metadata_light) %>% 
       left_join(., dswe_loc) %>% 
-      mutate(DSWE = str_sub(source, start, end), .by = mission) %>% 
-      mutate(DSWE = str_remove(DSWE, "_")) %>%
+      mutate(DSWE = str_sub(source, start, end), .by = mission,
+             DSWE = str_remove(DSWE, "_")) %>%
       left_join(., spatial_info)
     
     # break out the DSWE 1 data
